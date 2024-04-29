@@ -3,7 +3,7 @@ showWarningOnDirectExecution = false
 disableWidgetStateDuplicationWarning = true
 
 [server]
-port = 8558
+port = 8501
 
 [theme]
 base = "dark"
