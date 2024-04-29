@@ -13,27 +13,11 @@ st.set_page_config(
 global churn_cutoff
 churn_cutoff = 0.3
 
-#  Function to load machine learning components
-def load_components_function(fp):
-    #To load the machine learning components saved to re-use in the app
-    return tf.keras.models.load_model(fp)
-
-# def load_components(fp):
-    #To load the machine learning components saved to re-use in the app
-    
-    # return object
-
 # Loading the machine learning components
 def app():
-    # DIRPATH = os.path.dirname(os.path.realpath(__file__))
-    ml_core_fp = os.path.join("Assets","telco_model.h5")
-    ml_components_dict = load_components_function(fp=ml_core_fp)
-    # scaler_fp = os.path.join("Assets","scalerKer.pkl")
-    with open("Assets/scalerKer.pkl","rb") as f:
+    ml_components_dict = tf.keras.models.load_model("./Assets/telco_model.h5")
+    with open("./Assets/scalerKer.pkl","rb") as f:
         scaler_dict = pickle.load(f)
-    #  = 
-    # load_components(fp=scaler_fp)
-
 
     st.title(":1234: Telecom Churn App")
     st.write("""Welcome to ChurnShield Telecom Churn Prediction app!   
