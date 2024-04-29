@@ -1,7 +1,6 @@
 [global]
 showWarningOnDirectExecution = false
 disableWidgetStateDuplicationWarning = true
-runOnSave = true
 
 [server]
 port = 8501
