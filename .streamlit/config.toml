@@ -4,7 +4,7 @@ disableWidgetStateDuplicationWarning = true
 runOnSave = true
 
 [server]
-port  = 8501
+port  = 801
 
 [theme]
 base = "dark"
