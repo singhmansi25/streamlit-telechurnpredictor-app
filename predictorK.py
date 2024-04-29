@@ -3,6 +3,7 @@ import os
 import pickle
 import pandas as pd
 import tensorflow as tf
+import joblib
 
 st.set_page_config(
     page_title="Telecom Churn Prediction",
@@ -16,8 +17,7 @@ churn_cutoff = 0.3
 # Loading the machine learning components
 def app():
     ml_components_dict = tf.keras.models.load_model("./Assets/telco_model.h5")
-    with open("./Assets/scalerKer.pkl","rb") as f:
-        scaler_dict = pickle.load(f)
+    scaler_dict = joblib.load("./Assets/scalerKer.pkl","rb")
 
     st.title(":1234: Telecom Churn App")
     st.write("""Welcome to ChurnShield Telecom Churn Prediction app!   
